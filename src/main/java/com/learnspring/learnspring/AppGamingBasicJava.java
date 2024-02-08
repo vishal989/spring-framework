@@ -7,8 +7,9 @@ import com.learnspring.learnspring.game.SuperContraGame;
 public class AppGamingBasicJava {
      public static void main(String[] args){
           MarioGame marioGame = new MarioGame();
-          var superContraGame = new SuperContraGame();
-          GameRunner gameRunner = new GameRunner(marioGame);
+          var superContraGame = new SuperContraGame(); // object creation
+          GameRunner gameRunner = new GameRunner(marioGame); //bj creation + wiring of dependencies
+          // game is a dependency of gamerunner
 
           gameRunner.run();
 
