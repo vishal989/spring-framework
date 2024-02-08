@@ -9,5 +9,6 @@ public class AppGamingBasicJava {
           GameRunner gameRunner = new GameRunner(marioGame);
 
           gameRunner.run();
+
      }
 }
