@@ -5,9 +5,14 @@ import com.learnspring.learnspring.game.GamingConsole;
 import com.learnspring.learnspring.game.MarioGame;
 import com.learnspring.learnspring.game.SuperContraGame;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
 
-
+@Configuration
+@ComponentScan("com.learnspring.learnspring.game")
 public class AppGamingBasicJava {
+
      public static void main(String[] args){
 
 //          MarioGame marioGame = new MarioGame();
@@ -17,7 +22,7 @@ public class AppGamingBasicJava {
 //
 //          gameRunner.run();
 
-          try(var context = new AnnotationConfigApplicationContext(GamingConfiguration.class)){
+          try(var context = new AnnotationConfigApplicationContext(AppGamingBasicJava.class)){
                context.getBean(GamingConsole.class).up();
                context.getBean(GameRunner.class).run();
           }
